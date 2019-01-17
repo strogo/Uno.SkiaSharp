@@ -119,7 +119,7 @@ namespace SkiaSharp.Views.UWP
 			if (!isVisible)
 				return;
 
-			var info = CreateBitmap(info);
+			var info = CreateBitmap();
 
 			if (info.Width <= 0 || info.Height <= 0)
 				return;
