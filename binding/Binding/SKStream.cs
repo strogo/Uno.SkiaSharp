@@ -324,7 +324,7 @@ namespace SkiaSharp
 
 		internal void SetMemory (byte[] data, IntPtr length, bool copyData = false)
 		{
-			SkiaApi.sk_memorystream_set_memory (Handle, data, length, copyData);
+			SkiaApi.sk_memorystream_set_memory_2 (Handle, data, length, copyData);
 		}
 
 		public void SetMemory (byte[] data)

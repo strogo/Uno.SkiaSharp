@@ -236,7 +236,7 @@ namespace SkiaSharp
 			if (input == null)
 				throw new ArgumentNullException (nameof (input));
 
-			return GetObject<SKColorSpace> (SkiaApi.sk_colorspace_new_icc (input, (IntPtr)length));
+			return GetObject<SKColorSpace> (SkiaApi.sk_colorspace_new_icc_2 (input, (IntPtr)length));
 		}
 
 		public static SKColorSpace CreateIcc (byte[] input)
@@ -244,7 +244,7 @@ namespace SkiaSharp
 			if (input == null)
 				throw new ArgumentNullException (nameof (input));
 
-			return GetObject<SKColorSpace> (SkiaApi.sk_colorspace_new_icc (input, (IntPtr)input.Length));
+			return GetObject<SKColorSpace> (SkiaApi.sk_colorspace_new_icc_2 (input, (IntPtr)input.Length));
 		}
 
 		[Obsolete ("Use CreateRgb (SKColorSpaceRenderTargetGamma, SKMatrix44) instead.")]

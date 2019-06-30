@@ -188,7 +188,7 @@ namespace SkiaSharp
 		}
 
 		public float FontSpacing =>
-			SkiaApi.sk_paint_get_fontmetrics (Handle, IntPtr.Zero, 0);
+			SkiaApi.sk_paint_get_fontmetrics_2 (Handle, IntPtr.Zero, 0);
 
 		public SKFontMetrics FontMetrics {
 			get {
@@ -234,7 +234,7 @@ namespace SkiaSharp
 			if (buffer == IntPtr.Zero && length != IntPtr.Zero)
 				throw new ArgumentNullException (nameof (buffer));
 
-			return SkiaApi.sk_paint_measure_text (Handle, buffer, length, IntPtr.Zero);
+			return SkiaApi.sk_paint_measure_text_2 (Handle, buffer, length, IntPtr.Zero);
 		}
 
 		public float MeasureText (string text, ref SKRect bounds)
@@ -436,7 +436,7 @@ namespace SkiaSharp
 			if (dst == null)
 				throw new ArgumentNullException (nameof (dst));
 
-			return SkiaApi.sk_paint_get_fill_path (Handle, src.Handle, dst.Handle, IntPtr.Zero, resScale);
+			return SkiaApi.sk_paint_get_fill_path_2 (Handle, src.Handle, dst.Handle, IntPtr.Zero, resScale);
 		}
 
 		public bool GetFillPath (SKPath src, SKPath dst, SKRect cullRect)

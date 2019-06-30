@@ -26,7 +26,7 @@ namespace SkiaSharp
 			SkiaApi.sk_document_abort (Handle);
 
 		public SKCanvas BeginPage (float width, float height) =>
-			GetObject<SKCanvas> (SkiaApi.sk_document_begin_page (Handle, width, height, IntPtr.Zero), false);
+			GetObject<SKCanvas> (SkiaApi.sk_document_begin_page_2 (Handle, width, height, IntPtr.Zero), false);
 
 		public SKCanvas BeginPage (float width, float height, SKRect content) =>
 			GetObject<SKCanvas> (SkiaApi.sk_document_begin_page (Handle, width, height, ref content), false);

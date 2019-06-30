@@ -68,13 +68,13 @@ namespace SkiaSharp
 
 		public bool IsEmpty => VerbCount == 0;
 
-		public bool IsOval => SkiaApi.sk_path_is_oval (Handle, IntPtr.Zero);
+		public bool IsOval => SkiaApi.sk_path_is_oval_2 (Handle, IntPtr.Zero);
 
 		public bool IsRoundRect => SkiaApi.sk_path_is_rrect (Handle, IntPtr.Zero);
 
-		public bool IsLine => SkiaApi.sk_path_is_line (Handle, IntPtr.Zero);
+		public bool IsLine => SkiaApi.sk_path_is_line_2 (Handle, IntPtr.Zero);
 
-		public bool IsRect => SkiaApi.sk_path_is_rect (Handle, IntPtr.Zero, IntPtr.Zero, IntPtr.Zero);
+		public bool IsRect => SkiaApi.sk_path_is_rect_2 (Handle, IntPtr.Zero, IntPtr.Zero, IntPtr.Zero);
 
 		public SKPathSegmentMask SegmentMasks => SkiaApi.sk_path_get_segment_masks (Handle);
 

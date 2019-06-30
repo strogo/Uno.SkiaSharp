@@ -189,7 +189,7 @@ namespace SkiaSharp
 		public SKCodecResult StartIncrementalDecode (SKImageInfo info, IntPtr pixels, int rowBytes)
 		{
 			var cinfo = SKImageInfoNative.FromManaged (ref info);
-			return SkiaApi.sk_codec_start_incremental_decode (Handle, ref cinfo, pixels, (IntPtr)rowBytes, IntPtr.Zero);
+			return SkiaApi.sk_codec_start_incremental_decode_2 (Handle, ref cinfo, pixels, (IntPtr)rowBytes, IntPtr.Zero);
 		}
 
 		[Obsolete ("The Index8 color type and color table is no longer supported. Use StartIncrementalDecode(SKImageInfo, IntPtr, int, SKCodecOptions) instead.")]
@@ -235,7 +235,7 @@ namespace SkiaSharp
 		public SKCodecResult StartScanlineDecode (SKImageInfo info)
 		{
 			var cinfo = SKImageInfoNative.FromManaged (ref info);
-			return SkiaApi.sk_codec_start_scanline_decode (Handle, ref cinfo, IntPtr.Zero);
+			return SkiaApi.sk_codec_start_scanline_decode_2 (Handle, ref cinfo, IntPtr.Zero);
 		}
 
 		[Obsolete ("The Index8 color type and color table is no longer supported. Use StartScanlineDecode(SKImageInfo, SKCodecOptions) instead.")]

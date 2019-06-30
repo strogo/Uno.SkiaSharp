@@ -183,7 +183,7 @@ namespace SkiaSharp
 			if (data == null)
 				throw new ArgumentNullException (nameof (data));
 
-			var handle = SkiaApi.sk_image_new_from_encoded (data.Handle, IntPtr.Zero);
+			var handle = SkiaApi.sk_image_new_from_encoded_2 (data.Handle, IntPtr.Zero);
 			return GetObject<SKImage> (handle);
 		}
 
@@ -458,7 +458,7 @@ namespace SkiaSharp
 				throw new ArgumentNullException (nameof (picture));
 
 			var p = (paint == null ? IntPtr.Zero : paint.Handle);
-			return GetObject<SKImage> (SkiaApi.sk_image_new_from_picture (picture.Handle, ref dimensions, IntPtr.Zero, p));
+			return GetObject<SKImage> (SkiaApi.sk_image_new_from_picture_2 (picture.Handle, ref dimensions, IntPtr.Zero, p));
 		}
 
 		public static SKImage FromPicture (SKPicture picture, SKSizeI dimensions, SKMatrix matrix, SKPaint paint)
@@ -531,7 +531,7 @@ namespace SkiaSharp
 
 		public SKShader ToShader (SKShaderTileMode tileX, SKShaderTileMode tileY)
 		{
-			return GetObject<SKShader> (SkiaApi.sk_image_make_shader (Handle, tileX, tileY, IntPtr.Zero));
+			return GetObject<SKShader> (SkiaApi.sk_image_make_shader_2 (Handle, tileX, tileY, IntPtr.Zero));
 		}
 
 		public SKShader ToShader (SKShaderTileMode tileX, SKShaderTileMode tileY, SKMatrix localMatrix)

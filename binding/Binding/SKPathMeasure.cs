@@ -67,12 +67,12 @@ namespace SkiaSharp
 
 		public bool GetPosition (float distance, out SKPoint position)
 		{
-			return SkiaApi.sk_pathmeasure_get_pos_tan (Handle, distance, out position, IntPtr.Zero);
+			return SkiaApi.sk_pathmeasure_get_pos_tan_3 (Handle, distance, out position, IntPtr.Zero);
 		}
 
 		public bool GetTangent (float distance, out SKPoint tangent)
 		{
-			return SkiaApi.sk_pathmeasure_get_pos_tan (Handle, distance, IntPtr.Zero, out tangent);
+			return SkiaApi.sk_pathmeasure_get_pos_tan_2 (Handle, distance, IntPtr.Zero, out tangent);
 		}
 
 		public bool GetMatrix (float distance, out SKMatrix matrix, SKPathMeasureMatrixFlags flags)
