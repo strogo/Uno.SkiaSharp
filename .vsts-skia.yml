@@ -6,7 +6,7 @@ jobs:
     vmImage: 'ubuntu-latest'
 
   variables:
-    EMSCRIPTEN_VERSION: 1.39.11
+    EMSCRIPTEN_VERSION: 1.39.14
 
   steps:
   - checkout: self
