@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Project>
 
-  <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)/../libSkia/libSkiaSharp.a">
+  <ItemGroup Condition="'$(IsUnoHead)' == 'True' and '$(UnoRuntimeIdentifier)' == 'WebAssembly'">
+    <Content Include="$(MSBuildThisFileDirectory)../native/**/*.a">
       <Visible>false</Visible>
     </Content>
     <WasmShellExtraEmccFlags Include="-s USE_LIBPNG=1" />
